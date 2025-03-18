@@ -12,7 +12,7 @@ body {
 /* Variáveis */
 :root {
   /* Fonts */
-  --primary-font: "Source Code Pro", sans-serif;
+  --primary-font: "Source Sans 3", sans-serif;
   --secondary-font: "Roboto", sans-serif;
 
   /* Color */
@@ -36,7 +36,6 @@ body {
 
 /* Header */
 .header {
-  border: 2px solid red;
   min-height: 60px;
 }
 
