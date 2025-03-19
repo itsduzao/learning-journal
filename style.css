@@ -153,8 +153,6 @@ body {
   display: grid;
   grid-template-columns: 1fr;
   margin: 2.125em auto 1.6875em;
-  /* padding-top: 2.125em;
-  padding-bottom: 1.6875em; */
 }
 
 .posts__recent {
@@ -178,7 +176,7 @@ body {
 }
 
 main .post:not(:last-child) {
-  padding-bottom: 2.5rem;
+  margin-bottom: 2.5rem;
 }
 
 .post__image {
@@ -213,14 +211,15 @@ main .post:not(:last-child) {
   line-height: 1.25;
 }
 
-/* Post Full */
+/* Article Full */
 
-.post-full {
+.article-full {
+  margin-top: 2em;
   margin-bottom: 3.125em;
   color: var(--primary-text-color);
 }
 
-.post-full__header {
+.article-full__header {
   display: flex;
   flex-direction: column;
   gap: 1em 0;
@@ -228,20 +227,31 @@ main .post:not(:last-child) {
   width: 90%;
 }
 
-.post-full__date {
+.article-full__date {
   color: var(--primary-text-color);
   font-size: 0.75rem;
   font-family: var(--primary-font);
 }
 
-.post-full__title {
+.article-full__title {
+  padding-right: 1.25rem;
+  font-weight: 700;
+  line-height: 1.08;
+  letter-spacing: -0.06rem;
+}
+
+.article-full--post .article-full__title {
+  font-size: 2.1775rem;
+}
+
+.article-full--about .article-full__title {
   font-weight: 700;
   font-size: 2rem;
   line-height: 1.08;
   letter-spacing: -0.06rem;
 }
 
-.post-full__image {
+.article-full--post .article-full__image {
   display: block;
   transform: scaleX(-1);
   filter: brightness(0.7);
@@ -253,7 +263,14 @@ main .post:not(:last-child) {
   object-position: center 70%;
 }
 
-.post-full__content {
+.article-full--about .article-full__image {
+  border-radius: 50px;
+  max-width: 182px;
+  max-height: 182px;
+  object-fit: cover;
+}
+
+.article-full__content {
   display: flex;
   flex-direction: column;
   gap: 1.30em;
@@ -261,7 +278,11 @@ main .post:not(:last-child) {
   width: 90%;
 }
 
-.post-full__heading {
+.article-full--about .article-full__content {
+  margin-top: 3.125em;
+}
+
+.article-full__heading {
   font-weight: 700;
   font-size: 1rem;
 }
